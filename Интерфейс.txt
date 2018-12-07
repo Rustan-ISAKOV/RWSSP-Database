@@ -1,0 +1,34 @@
+package com.company;
+
+//import java.lang.String;    // для импортирования переменных String
+import java.util.Scanner;
+
+// Интерфейс представляет из себя класс, в котором все поля будут статик и/или финал, а все методы будут абстрактными
+
+public class Main {
+
+    public static void main (String[] args) {
+        Array a = new MyArray();
+        System.out.println(a.Add(3));
+        System.out.println(a.Add(23));
+        System.out.println(a.Add(33));
+        System.out.println(a.Add(9));
+        System.out.println(a.Add(11));
+        System.out.println(a.Get(4));
+
+        System.out.println("");
+        Array b = new Array_1();
+        System.out.println(a.Add(3));
+        System.out.println(a.Add(23));
+        System.out.println(a.Add(33));
+        System.out.println(a.Add(11));
+        System.out.println(a.Get(3));
+
+
+
+
+
+
+
+    }
+}

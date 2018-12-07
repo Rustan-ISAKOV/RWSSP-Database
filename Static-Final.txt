@@ -1,0 +1,50 @@
+package com.company;
+
+//import java.lang.String;    // для импортирования переменных String
+import java.util.Scanner;
+
+public class Main {
+    //Модификаторы static и final
+    //Модификатор static -  можем использовать методы без создания к-л экземпляра или объекта класса,
+    //т.е. сразу берем класс и его метод Math.summ(55, 45), благодаря тому, что мы прописываем static в методе
+    // (функции) мы можем обращаться к методам без создания экземпляра, т.е.
+//    Math a = new Math();
+//    int x = a.mult(1,2);
+//    int y = a.summ(1,2);
+//    System.out.println(x);
+//    System.out.println(y);
+
+    //Модификаторы final  у класса - значит, что у класса не может быть наследников.
+    //Если сделать наследование от такого класса, то будет ошибка
+    //Модификаторы final  у метода (функции) - значит, что я не могу переопределить этот метод в других классах.
+
+    public static void main (String[] args) {
+//        int x = Math.summ(55, 45);  //обращение к методу static
+//        System.out.println(x);
+//
+//        Math a = new Math();        //обращение к методу без static
+//        int y = a.mult(2,55);
+//        System.out.println(y);
+
+// пример полей, которые имеют параметр static
+    int x = Math.mult(2, 10);
+    System.out.println(x);
+
+    Math a = new Math();
+    a.x = 44;
+    System.out.println(a.x);
+
+    Math.x = 24;
+    System.out.println(Math.x);
+
+    Math b = new Math();
+    System.out.println(b.x);
+
+
+
+
+
+
+
+    }
+}

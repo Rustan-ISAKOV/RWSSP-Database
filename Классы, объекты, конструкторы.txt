@@ -1,0 +1,69 @@
+main.java
+
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+    public static void main (String[] args) {
+        // объект или экземпляр класса
+        Person vasya = new Person(140); // сработал конструктор с передачей параметра
+        System.out.println("vasya.height = " + vasya.height);
+
+        // объект или экземпляр класса
+        Person petya = new Person(); // здесь сработал конструктор по умолчанию, height - по умолчанию
+        System.out.println("petya.height = " + petya.height);
+        petya.say("Garik!");
+
+        // объект или экземпляр класса
+        Person kolya = new Person(100); // сработал конструктор с передачей параметра
+        System.out.println("kolya.height = " + kolya.height);
+
+        // объект или экземпляр класса
+        Person sanya = new Person(250, "Sanya"); // сработал конструктор с передачей 2 параметров
+        System.out.println("Рост Сани = " + sanya.height);
+
+        // объект или экземпляр класса
+        Person dima = new Person("Dima"); // сработал конструктор с передачей 1 параметра, height - по умолчанию
+        System.out.println("Рост Димы = " + dima.height + ". Имя Димы: " + dima.name);
+    }
+}
+
+
+
+
+
+
+
+// -------------------
+Person.java
+// каждый класс в своем файле и с большой буквы, имя класса = имя файла
+
+
+package com.company;
+
+public class Person {
+    public int height = 180;
+    public String name = "Игрок";
+
+    public void say (String name) {
+        System.out.println("Privet, " + name);
+    }
+
+    // конструкторы создают экземпляры (объекты) классов и при создании какого-либо объекта мы можем сразу
+    // использовать к.л. конструктор. конструкторы помогают создавать экземпляры классов (объекты) сразу с к-л.
+    // апарметрами. Причем, создавать этот объект можно заполняя те или иные пар-ры. и можно создавать много
+    // конструкторов в одном классе.
+    // конструкторы c передачей параметра. имя - точная копия класса
+    public Person () {}
+
+    public Person (int h) {
+        height = h;
+    }
+    public Person (int h, String n) {
+        height = h;
+        name = n;
+    }
+    public Person (String n) {
+        name = n;
+    }
+}
